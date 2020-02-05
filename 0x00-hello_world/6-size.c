@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - Print using printf, the size of various
- * types on the computer it is compiled *
+ * types on the computer it is compiled 
  * Return: 0
  */
 int main(void)
