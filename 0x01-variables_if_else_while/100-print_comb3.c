@@ -1,7 +1,7 @@
 #include <stdio.h>
 /* more headers goes there */
 /**
- * main - prints number from 0 to 9
+ * main - prints all possible different combinations of two digits.
  * Return: 0
  */
 
@@ -11,8 +11,8 @@ int main(void)
 
 	for (i = 0; i <= 8; i++)
 	{
-		j=i+1;
-		while (j<=9)
+		j = i + 1;
+		while (j <= 9)
 		{
 			putchar((char) (i + 48));
 			putchar((char) (j + 48));
@@ -23,7 +23,6 @@ int main(void)
 			}
 		j++;
 		}
-		
 	}
 	putchar('\n');
 	return (0);
