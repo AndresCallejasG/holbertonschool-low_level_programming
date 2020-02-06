@@ -7,11 +7,13 @@
 
 int main(void)
 {
-	char i;
+	int i;
+	char digit;
 
 	for (i = 0; i <= 9; i++)
 	{
-		putchar(i);
+		digit = (char)(i + 48);
+		putchar(digit);
 	}
 	putchar('\n');
 	return (0);
