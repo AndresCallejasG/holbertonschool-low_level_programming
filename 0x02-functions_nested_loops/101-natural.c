@@ -10,7 +10,7 @@ int main(void)
 {
 	int i, j, sum_i, sum_j, sum_ij;
 
-	for (i = 0; i < 1024; i += 3)
+	for (i = 0; i < 1024; i += 5)
 	{
 		sum_i += i;
 	}
