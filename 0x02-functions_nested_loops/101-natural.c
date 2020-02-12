@@ -9,7 +9,7 @@
 int main(void)
 {
 	int i, j, sum_i, sum_j, sum_ij;
-	
+
 	sum_i = 0;
 	sum_j = 0;
 
@@ -25,4 +25,6 @@ int main(void)
 
 	sum_ij = sum_i + sum_j;
 	printf("%d\n", sum_ij);
+
+	return (0);
 }
