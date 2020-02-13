@@ -10,25 +10,26 @@
 int main(void)
 {
 	int i;
-	bool mult;
+	int flag;
 
 	for (i = 1; i <= 100; i++)
 	{
-		mult = false;
+		flag = 1;
 
 		if (i % 3 == 0)
 		{
-			mult = true;
+			flag = 0;
 			printf("Fizz");
 		}
 		if (i % 5 == 0)
 		{
-			mult = true;
+			flag = 0;
 			printf("Buzz");
 		}
-		if (!mult)
+		if (flag)
 			printf("%d", i);
-		printf(" ");
+		if (i <= 99)	
+			printf(" ");
 	}
 	printf("\n");
 
