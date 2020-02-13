@@ -28,7 +28,7 @@ int main(void)
 		}
 		if (flag)
 			printf("%d", i);
-		if (i <= 99)	
+		if (i <= 99)
 			printf(" ");
 	}
 	printf("\n");
