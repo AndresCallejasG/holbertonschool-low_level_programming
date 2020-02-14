@@ -9,7 +9,7 @@
 void print_number(int n)
 {
 	int i, size;
-	int num, num_temp, dig, div;
+	long int num, num_temp, dig, div;
 
 	num = n;
 	size = 0;
@@ -20,14 +20,18 @@ void print_number(int n)
 		num = num * -1;
 		_putchar('-');
 	}
+
 	num_temp = num;
+
 	while (num_temp != 0)
 	{
 		size++;
-		div = div * 10;
 		num_temp /= 10;
+		div = div * 10;
 	}
+
 	div /= 10;
+
 	for (i = size - 1; i >= 1; i--)
 	{
 		dig = num / div;
