@@ -9,7 +9,7 @@
 void print_number(int n)
 {
 	int i, size;
-	long int num, num_temp, dig, div;
+	int num, num_temp, dig, div;
 
 	num = n;
 	size = 0;
