@@ -1,4 +1,4 @@
-#include "holberton.h"
+# include "holberton.h"
 /**
 * print_number - prints an integer char by char
 * @n: The integer to print
@@ -18,7 +18,7 @@ void print_number(int n)
 	if (num < 0)
 	{
 		num = num * -1;
-		_putchar('-');
+		_putchar(45);
 	}
 
 	num_temp = num;
