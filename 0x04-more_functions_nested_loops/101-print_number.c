@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
 * print_number - prints an integer char by char
 * @n: The integer to print
@@ -27,10 +28,13 @@ void print_number(int n)
 	{
 		size++;
 		num_temp /= 10;
-		div = div * 10;
+
 	}
 
-	div /= 10;
+	for  i = 1; i < size; i++)
+	{
+		div = div * 10;
+	}
 
 	for (i = size - 1; i >= 1; i--)
 	{
