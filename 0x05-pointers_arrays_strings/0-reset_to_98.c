@@ -5,8 +5,7 @@
 * and updates the value it points to to 98.
 * @n: pointer to the variable to change
 *
-* Return: uppercase 1.
-* 0 otherwise.
+* Return: void
 */
 
 void reset_to_98(int *n)
