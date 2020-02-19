@@ -14,7 +14,7 @@ int _atoi(char *s)
 	int neg, num, flag;
 
 	i = 0;
-	neg = 1;
+	neg = -1;
 	flag = 0;
 	num = 0;
 
@@ -26,13 +26,14 @@ int _atoi(char *s)
 		{
 			flag = 1;
 			num *= 10;
-			num += s[i] - '0';
+			num -= (s[i] - '0');
 		}
 		else if (flag)
 			break;
 		i++;
 	}
 	num = num * neg;
+
 	return (num);
 
 }
