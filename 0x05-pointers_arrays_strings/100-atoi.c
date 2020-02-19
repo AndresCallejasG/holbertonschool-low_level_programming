@@ -9,7 +9,7 @@
 
 int _atoi(char *s)
 {
-	int i, j, flag; 
+	int i, j, flag;
 	int neg, mult, num, first;
 
 	i = 0;
@@ -23,15 +23,14 @@ int _atoi(char *s)
 	{
 		if (s[i] == '-')
 			neg++;
-		if (s[i] >= 0 && s[i] <= 9)
+		else if (s[i] >= '0' && s[i] <= '9')
 		{
 			first = i;
-			while (s[i] >= 0 && s[i] <= 9)
+			while (s[i + 1] >= '0' && s[i + 1] <= '9')
 				i++;
-			mult = 1;
-			for (j = i; i >= first; i--)
+			for (j = i; j >= first; j--)
 			{
-				num = (s[j] - '0') * mult;
+				num += (s[j] - '0') * mult;
 				mult *= 10;
 			}
 			if ((neg % 2) == 1)
