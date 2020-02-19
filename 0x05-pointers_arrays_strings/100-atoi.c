@@ -9,7 +9,8 @@
 
 int _atoi(char *s)
 {
-	int i, j, flag, neg, mult, num;
+	int i, j, flag; 
+	int neg, mult, num, first;
 
 	i = 0;
 	j = 0;
@@ -28,7 +29,7 @@ int _atoi(char *s)
 			while (s[i] >= 0 && s[i] <= 9)
 				i++;
 			mult = 1;
-			for (j = i; i >= inicio; i--)
+			for (j = i; i >= first; i--)
 			{
 				num = (s[j] - '0') * mult;
 				mult *= 10;
