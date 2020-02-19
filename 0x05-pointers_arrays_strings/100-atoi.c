@@ -9,13 +9,12 @@
 
 int _atoi(char *s)
 {
-	int i, j, flag;
+	int i, j;
 	int neg, mult, num, first;
 
 	i = 0;
 	j = 0;
 	neg = 0;
-	flag = 0;
 	mult = 1;
 	num = 0;
 
@@ -35,10 +34,8 @@ int _atoi(char *s)
 			}
 			if ((neg % 2) == 1)
 				num = num * -1;
-			flag = 1;
+			return (num);
 		}
-		if (flag)
-			break;
 		i++;
 	}
 
