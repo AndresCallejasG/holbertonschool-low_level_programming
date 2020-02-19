@@ -4,7 +4,8 @@
 * _atoi - convert a string to an integer
 * @s: string
 *
-* Return: int
+* Return: num if finds a number
+* 0 otherwise
 */
 
 int _atoi(char *s)
@@ -39,5 +40,5 @@ int _atoi(char *s)
 		i++;
 	}
 
-	return (num);
+	return (0);
 }
