@@ -16,7 +16,7 @@ char *leet(char *s)
 	i = 0;
 	j = 0;
 
-	while (s[i] != '\n')
+	while (s[i] != '\0')
 	{
 		while (j < 8)
 		{
