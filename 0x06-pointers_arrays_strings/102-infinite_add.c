@@ -12,42 +12,24 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int size1 = 0, size2 = 0, add = 0, rem = 0, aux = 0;
-	int flag1 = 1, flag2 = 1, i = 0, j = 0;
+	int size1 = 0, size2 = 0, add = 0, rem = 0, aux = 0, i = 0, j = 0;
 
-	while ((flag1 || flag2))
-	{
-		if (n1[i] == '\0')
-		{
-			size1 = i;
-			flag1 = 0;
-		}
-		if (n2[i] == '\0')
-		{
-			size2 = i;
-			flag2 = 0;
-		}
-		if (i + 2 > size_r)
-			return (0);
-		i++;
-	}
+	while (n1[size1] != 0)
+		size1++;
+	while (n2[size2] != 0)
+		size2++;
+	if ((size1) + 2 > size_r || (size2 + 2) > size_r)
+		return (0);
 	size1--;
 	size2--;
-	rem = 0;
-	i = 0;
+	rem = 0, i = 0;
 	while (size1 >= 0 || size2 >= 0)
 	{
 		add = 0;
 		if (size1 >= 0)
-		{
-			add += n1[size1] - '0';
-			size1--;
-		}
+			add += n1[size1--] - '0';
 		if (size2 >= 0)
-		{
-			add += n2[size2] - '0';
-			size2--;
-		}
+			add += n2[size2--] - '0';
 		add = add + rem;
 		if (add > 9)
 		{
@@ -56,15 +38,10 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		}
 		else
 			rem = 0;
-
-		r[i] = (add + '0');
-		i++;
+		r[i++] = (add + '0');
 	}
 	if (rem == 1)
-	{
-		r[i] = 1 + '0';
-		i++;
-	}
+		r[i++] = 1 + '0';
 	for (j = 0; j < i / 2; j++)
 	{
 		aux = r[j];
