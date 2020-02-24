@@ -9,6 +9,7 @@
  * Return: pointer to the first occurrence
  * if not found, NULL
  */
+
 char *_strchr(char *s, char c)
 {
 	unsigned int i;
@@ -18,8 +19,11 @@ char *_strchr(char *s, char c)
 	while (s[i] != '\0')
 	{
 		if (s[i] == c)
+		{
 			return (s + i);
+		}
 		i++;
 	}
+
 	return ('\0');
 }
