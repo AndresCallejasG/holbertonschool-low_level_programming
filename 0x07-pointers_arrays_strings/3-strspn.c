@@ -32,7 +32,5 @@ unsigned int _strspn(char *s, char *accept)
 			break;
 		i++;
 	}
-	if (s[i] == '\0')
-		i++;
 	return (i);
 }
