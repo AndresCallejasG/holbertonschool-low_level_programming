@@ -34,6 +34,8 @@ char *_strstr(char *haystack, char *needle)
 				flag = 1;
 				break;
 			}
+			if (haystack[k] == '\0')
+				break;
 		}
 		if (flag)
 			return (haystack + i);
