@@ -28,7 +28,7 @@ unsigned int _strspn(char *s, char *accept)
 				flag = 0;
 			j++;
 		}
-		if(flag)
+		if (flag)
 			break;
 		i++;
 	}
