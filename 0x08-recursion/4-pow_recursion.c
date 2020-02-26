@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _pow_recursionfactorial - returns the factorial of a given number.
+ * _pow_recursion - value of x raised to the power of y.
  *
  * @x: base
  * @y: power
