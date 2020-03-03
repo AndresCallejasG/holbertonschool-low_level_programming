@@ -16,6 +16,12 @@ char *str_concat(char *s1, char *s2)
 
 	i = 0;
 	j = 0;
+
+	if (s1 == 0)
+		s1 = "";
+	if (s2 == 0)
+		s2 = "";
+
 	len1 = len(s1);
 	len2 = len(s2);
 
