@@ -30,7 +30,7 @@ char *argstostr(int ac, char **av)
 			size_i++;
 		}
 	}
-	concat = (char *) malloc((size_i + ac + 1) * sizeof(char *));
+	concat = malloc((size_i + ac + 1) * sizeof(char *));
 	if (concat == 0)
 		return (0);
 	size_i = 0;
