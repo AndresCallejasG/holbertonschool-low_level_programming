@@ -1,4 +1,3 @@
-#include "holberton.h"
 #include <stdlib.h>
 
 /**
@@ -32,7 +31,10 @@ char *argstostr(int ac, char **av)
 	}
 	concat = malloc((size_i + ac + 1) * sizeof(char *));
 	if (concat == 0)
+	{
+		free(concat);
 		return (0);
+	}
 	size_i = 0;
 	for (i = 0; i < ac; i++)
 	{
