@@ -7,13 +7,13 @@
  * @av: argv[]
  *
  * Return: args concat.
- * NULL if error.
+ * if error null
  */
 
 char *argstostr(int ac, char **av)
 {
-	char *concat;
 	int i, j, size_i;
+	char *concat;
 
 	i = 0;
 	j = 0;
@@ -24,15 +24,14 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; av[i][j] != '\0'; j++)
+		for (j = 0; av[i][j] != 0; j++)
 		{
 			size_i++;
 		}
 	}
-	concat = malloc((size_i + ac + 1) * sizeof(char *));
+	concat = malloc(sizeof(char *) * (size_i + ac + 1));
 	if (concat == 0)
 	{
-		free(concat);
 		return (0);
 	}
 	size_i = 0;
@@ -46,6 +45,6 @@ char *argstostr(int ac, char **av)
 		concat[size_i] = '\n';
 		size_i++;
 	}
-	concat[size_i] = '\0';
+	concat[size_i] = 0;
 	return (concat);
 }
