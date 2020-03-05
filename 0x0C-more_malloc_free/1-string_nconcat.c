@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * str_nconcat - concatenate two strings
+ * string_nconcat - concatenate two strings
  *
  * @s1: string 1
  * @s2: string 2
@@ -26,7 +26,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	len1 = len(s1);
 	len2 = len(s2);
 
-	concat = malloc((len1 + len2) * sizeof(char) + 1);
+	if (n < len2)
+		concat = malloc((len1 + n) * sizeof(char) + 1);
+	else
+		concat = malloc((len1 + len2) * sizeof(char) + 1);
 
 	if (concat == 0)
 		return ('\0');
