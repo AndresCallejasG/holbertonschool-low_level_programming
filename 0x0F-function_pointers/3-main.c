@@ -20,8 +20,8 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	op = argv[2];
-	if (!(op[0] == '+' || op[0] == '-' || op[0] == '*' ||
-	op[0] == '/' || op[0] == '%'))
+	if ((!(op[0] == '+' || op[0] == '-' || op[0] == '*' ||
+	op[0] == '/' || op[0] == '%')) || op[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
