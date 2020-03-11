@@ -1,4 +1,4 @@
-#include <stdlib.h>
+typedef unsigned int size_t;
 /**
  * array_iterator - calls a funtion using every value
  * of the array as parameter
