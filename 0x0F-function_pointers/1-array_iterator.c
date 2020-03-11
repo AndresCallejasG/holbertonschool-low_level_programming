@@ -1,4 +1,4 @@
-typedef unsigned int size_t;
+#include <stdlib.h>
 /**
  * array_iterator - calls a funtion using every value
  * of the array as parameter
@@ -13,7 +13,7 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	unsigned int i;
 
-	if ((size > 0) && action)
+	if ((size > 0) && action && array)
 	{
 
 		for (i = 0; i < size; i++)
