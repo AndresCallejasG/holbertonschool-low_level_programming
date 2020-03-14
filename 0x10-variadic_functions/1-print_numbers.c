@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <stdarg.h>
+#include <stdio.h>
 /**
  * print_numbers - print numbers using a separator.
  *
