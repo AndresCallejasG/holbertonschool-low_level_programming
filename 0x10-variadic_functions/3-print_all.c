@@ -35,7 +35,14 @@ void p_int(va_list valist)
  **/
 void p_str(va_list valist)
 {
-	printf("%s", va_arg(valist, char *));
+	char *str;
+	
+	str = va_arg(valist, char *);
+
+	if (str != 0)
+		printf("%s", str);
+	else
+		printf("(nil)");
 }
 /**
  * print_all - prints "anything"
