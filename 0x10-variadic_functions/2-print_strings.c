@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <stdarg.h>
+#include <stdio.h>
 /**
  * print_strings - print stringd using a separator.
  *
@@ -11,21 +11,22 @@
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	va_list valist;
 	unsigned int i;
 	char *ch;
+
+	va_list valist;
 
 	va_start(valist, n);
 
 	for (i = 0; i < n ; i++)
 	{
 		ch = va_arg(valist, char *);
-		if (ch == NULL && separator != NULL && i < n - 1)
-			printf("(nil)%s", separator);
-		else if (separator != NULL && i < n - 1)
-			printf("%s%s", ch, separator);
-		else
+		if (ch != 0)
 			printf("%s", ch);
+		else
+			printf("(nil)");
+		if (separator != 0 && i < n - 1)
+			printf("%s", separator);
 	}
 	printf("\n");
 
