@@ -20,8 +20,7 @@ size_t list_len(const list_t *h)
 			current = current->next;
 			i++;
 		}
-		
 	}
 
-	return (i);	
+	return (i);
 }
