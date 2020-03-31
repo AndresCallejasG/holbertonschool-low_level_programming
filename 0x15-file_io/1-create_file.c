@@ -23,13 +23,11 @@ int create_file(const char *filename, char *text_content)
 		if (fd == -1)
 			return (-1);
 
+		/*empty file case*/
+		if (text_content == NULL)
+			return (1);
 		while (text_content[size] != 0)
 			size++;
-
-		/*empty file case*/
-		if (size == 0)
-			return (1);
-			
 		count = write(fd, text_content, size);
 		if (count == -1)
 			return (-1);
